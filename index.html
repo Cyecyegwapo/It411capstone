@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   
+    <div class="header-logo">
+        <img src="logo.png" alt="UNIVENT Logo" style="height: 50px; vertical-align: middle;">
+        <span style="margin-left: 10px;">UNIVENT</span>
+    </div>
+    
+
+    <div class="container">
+        <h1>ST. PAUL UNIVERSITY DUMAGUETE<br>EVENT MANAGEMENT SYSTEM</h1>
+        <p>
+            This system is designed to reduce the administrative burden on event organizers, 
+            improve information accuracy and accessibility for attendees, 
+            and enhance the overall event experience for everyone involved.
+        </p>
+        <button class="login-button" onclick="showLoginForm()">Log In</button>
+    </div>
+
+    <div class="backdrop" onclick="hideLoginForm()"></div>
+
+  
+    <div class="login-container" id="loginForm" >
+        <form method="POST" action="login.php">
+            
+            <div class="login-header">
+                <img src="logo.png" alt="University Logo" style="width: 150px;">
+                
+            </div>
+            
+            
+            <div class="login-body">
+                <h2 text-align="center">Log In</h2>
+                <form action="login.php" method="POST">
+                <input type="text" placeholder="USERNAME" name= "username" required>
+                <input type="password" placeholder="PASSWORD" name="password" required>
+                <button type="submit">Log In</button>
+            </form>
+            </div>
+            
+       
+            <div class="login-footer">
+                <a href="#">Forgot Password?</a>
+                <p>By logging in, you agree with Terms and Conditions</p>
+            </div>
+        </form>
+    </div>
+
+ 
+    <script>
+      
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.querySelector('.backdrop').style.display = 'block';
+        }
+
+     
+        function hideLoginForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.querySelector('.backdrop').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
